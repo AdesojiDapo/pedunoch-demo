@@ -526,13 +526,13 @@ footer{background:var(--panel);border-top:1px solid var(--line);padding:56px 0 3
       var knock=document.querySelector('.knock');
       if(!knock)return;
       if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){
-        knock.style.setProperty('--ks','0.9');
+        knock.style.setProperty('--ks','0.725');
         return;
       }
       function update(){
         var y=window.scrollY||document.documentElement.scrollTop||0;
         var p=Math.min(1,Math.max(0,y/280));
-        knock.style.setProperty('--ks',(1-0.2*p).toFixed(3));
+        knock.style.setProperty('--ks',(1-0.275*p).toFixed(3));
       }
       window.addEventListener('scroll',update,{passive:true});
       update();
